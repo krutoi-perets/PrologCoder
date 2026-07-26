@@ -1,0 +1,26 @@
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\PrologCoder.exe
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\PrologCoder.deps.json
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\PrologCoder.runtimeconfig.json
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\PrologCoder.dll
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\PrologCoder.pdb
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\ICSharpCode.AvalonEdit.dll
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.csproj.AssemblyReference.cache
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\App.g.cs
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder_MarkupCompile.cache
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder_MarkupCompile.lref
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.g.resources
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.AssemblyInfoInputs.cache
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.AssemblyInfo.cs
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.csproj.CoreCompileInputs.cache
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCo.773034F9.Up2Date
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.dll
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\refint\PrologCoder.dll
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.pdb
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.genruntimeconfig.cache
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\ref\PrologCoder.dll
+C:\Влад\Мои программы\PrologCoder\bin\Debug\net10.0-windows\Compiler\SWI Prolog\swipl.exe
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder_Content.g.cs
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\Views\MainWindow.g.cs
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\Views\MainWindow.baml
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs

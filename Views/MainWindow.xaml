@@ -1,0 +1,59 @@
+﻿<Window x:Class="PrologCoder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:local="clr-namespace:PrologCoder"
+        mc:Ignorable="d"
+        Title="PrologCoder" Height="800" Width="1200">
+    <DockPanel>
+        <Menu Name="menuBar" DockPanel.Dock="Top">
+            <MenuItem Header="File" Name="menuFile">
+                <MenuItem Header="New" Name="menuFileNew"/>
+                <MenuItem Header="Open" Name="menuFileOpen"/>
+                <MenuItem Header="Save" Name="menuFileSave"/>
+            </MenuItem>
+            <MenuItem Header="Edit" Name="menuEdit">
+                <MenuItem Header="Undo" Name="menuEditUndo"/>
+                <MenuItem Header="Redo" Name="menuEditRedo"/>
+            </MenuItem>
+            <MenuItem Header="Settings" Name ="menuSettings"/>
+        </Menu>
+
+        <ToolBar Name="toolBar" DockPanel.Dock="Top">
+            <Button Content="⬅" Name="Undo" FontFamily="Consolas" FontSize="16"/>
+            <Button Content="⮕" Name="Redo" FontFamily="Consolas" FontSize="16"/>
+            <Separator/>
+            <Button Content="📄" Name="NewFile" FontFamily="Consolas" FontSize="16" Click="NewFile_Click"/>
+            <Button Content="📁" Name="OpenFile" FontFamily="Consolas" FontSize="16" Click="OpenFile_Click"/>
+            <Button Content="💾" Name="SaveFile" FontFamily="Consolas" FontSize="16" Click="SaveFile_Click"/>
+            <Separator/>
+            <Button Content="▶" Name="Run" FontFamily="Consolas" FontSize="16" Click="Run_Click"/>
+            <Button Content="⬛" Name="Stop" FontFamily="Consolas" FontSize="16" Click="Stop_Click" IsEnabled="False"/>
+        </ToolBar>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="Untitled.pl" Name="sbCurrentFile" HorizontalAlignment="Right"/>
+            <Separator/>
+            <StatusBarItem Content="Line: 1" Name="sbLine" HorizontalAlignment="Right"/>
+            <Separator/>
+            <StatusBarItem Content="Column: 1" Name="sbColumn" HorizontalAlignment="Right"/>
+        </StatusBar>
+
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            
+            <avalonedit:TextEditor Name="editor" Grid.Row="0" FontFamily="Consolas" FontSize="14" ShowLineNumbers="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextChanged="editor_TextChanged"/>
+            <Separator Grid.Row="1" Height="2"/>
+            <Label Grid.Row="2" Content="Output" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <local:PrologTerminal x:Name="output" Grid.Row="3" FontFamily="Consolas" FontSize="14" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" WordWrap="True"/>
+        </Grid>
+    </DockPanel>
+</Window>
