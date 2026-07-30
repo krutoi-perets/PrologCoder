@@ -24,3 +24,4 @@ C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\Prol
 C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\Views\MainWindow.g.cs
 C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\Views\MainWindow.baml
 C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Влад\Мои программы\PrologCoder\obj\Debug\net10.0-windows\PrologCoder.sourcelink.json

@@ -1,8 +1,11 @@
 ﻿using Microsoft.Win32;
+using PrologCoder.Analysis;
+using PrologCoder.Highlighting;
 using PrologCoder.Models;
 using PrologCoder.Services;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace PrologCoder
 {
@@ -12,16 +15,31 @@ namespace PrologCoder
     public partial class MainWindow : Window
     {
         private bool _ignoreTextChanged = false;
+        
+        private readonly DispatcherTimer _parseTimer = new();
 
         private readonly FileService _fileService = new();
         private readonly CompilerService _compilerService = new();
+        private readonly PrologParser _parser = new();
+        private readonly PrologColorizer _colorizer = new();
 
-        private Document _document = new(); 
+        private Document _document = new();
+        private List<PredicateInfo> _userPredicates = [];
 
         public MainWindow()
         {
             InitializeComponent();
             InitializeTextEditor();
+
+            _parseTimer.Interval = TimeSpan.FromSeconds(1);
+            _parseTimer.Tick += (s, e) =>
+            {
+                _parseTimer.Stop();
+
+                _userPredicates = _parser.GetPredicates(editor.Text);
+                _colorizer.UserPredicates = _userPredicates;
+                editor.TextArea.TextView.Redraw();
+            };
 
             _compilerService.ProcessStarted += () =>
             {
@@ -65,6 +83,8 @@ namespace PrologCoder
 
         private void InitializeTextEditor()
         {
+            editor.TextArea.TextView.LineTransformers.Add(_colorizer);
+
             editor.Options.ConvertTabsToSpaces = true;
             editor.Options.HighlightCurrentLine = true;
             editor.Options.IndentationSize = 4;
@@ -170,7 +190,11 @@ namespace PrologCoder
 
         private void editor_TextChanged(object sender, EventArgs e)
         {
+            _parseTimer.Stop();
+            _parseTimer.Start();
+
             if (_ignoreTextChanged) return;
+
             _document.IsModified = true;
             sbCurrentFile.Content = $"{_document.FileName}*";
         }
