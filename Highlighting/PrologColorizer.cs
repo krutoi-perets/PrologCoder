@@ -9,7 +9,6 @@ namespace PrologCoder.Highlighting
     public class PrologColorizer : DocumentColorizingTransformer
     {
         public List<PredicateInfo> UserPredicates { get; set; } = [];
-        private readonly string[] _builtInPredicates = PrologKnowledge.BuiltInPredicates;
         private readonly string[] _keywords = PrologKnowledge.Keywords;
 
         protected override void ColorizeLine(DocumentLine line)
@@ -23,9 +22,9 @@ namespace PrologCoder.Highlighting
             ColorRegex(line, text, @"\b[a-zа-я][A-Za-zА-Яа-я0-9_]*\b", Brushes.DarkCyan);
 
             // Встроенные предикаты
-            foreach (var predicate in _builtInPredicates)
+            foreach (var predicate in PrologKnowledge.BuiltInPredicates)
             {
-                ColorRegex(line, text, $@"\b{predicate}\b", Brushes.Goldenrod);
+                ColorRegex(line, text, $@"\b{predicate.Name}\b", Brushes.Goldenrod);
             }
 
             // Пользовательские предикаты

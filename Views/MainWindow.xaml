@@ -43,7 +43,7 @@
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             
-            <avalonedit:TextEditor Name="editor" Grid.Row="0" FontFamily="Consolas" FontSize="14" ShowLineNumbers="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextChanged="editor_TextChanged"/>
+            <avalonedit:TextEditor Name="editor" Grid.Row="0" FontFamily="Consolas" FontSize="14" ShowLineNumbers="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextChanged="editor_TextChanged" FontWeight="Bold"/>
             <StatusBar Grid.Row="1" DockPanel.Dock="Bottom">
                 <StatusBarItem Content="Untitled.pl" Name="sbCurrentFile" HorizontalAlignment="Right"/>
                 <Separator/>

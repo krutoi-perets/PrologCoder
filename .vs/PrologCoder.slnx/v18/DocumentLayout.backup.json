@@ -11,24 +11,24 @@
       "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:analysis\\prologparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\completion\\completiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:completion\\completiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\completion\\completionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:completion\\completionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\analysis\\predicateinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:analysis\\predicateinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\analysis\\prologknowledge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:analysis\\prologknowledge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\controls\\prologterminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:controls\\prologterminal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\highlighting\\prologcolorizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:highlighting\\prologcolorizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|c:\\\u0432\u043B\u0430\u0434\\\u043C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\prologcoder\\services\\compilerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{250A79BA-8AA6-EFDF-0717-814F4B0F7984}|PrologCoder.csproj|solutionrelative:services\\compilerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-07-30T21:24:51.252Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -61,23 +60,10 @@
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
               "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAqwMQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAQwL8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-12T17:03:30.052Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PrologKnowledge.cs",
-              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PrologKnowledge.cs",
-              "RelativeDocumentMoniker": "Analysis\\PrologKnowledge.cs",
-              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PrologKnowledge.cs",
-              "RelativeToolTip": "Analysis\\PrologKnowledge.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T21:27:24.909Z",
               "EditorCaption": ""
             },
             {
@@ -88,48 +74,58 @@
               "RelativeDocumentMoniker": "Analysis\\PrologParser.cs",
               "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PrologParser.cs",
               "RelativeToolTip": "Analysis\\PrologParser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T10:23:23.894Z",
+              "WhenOpened": "2026-08-04T13:39:25.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PrologColorizer.cs",
-              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Highlighting\\PrologColorizer.cs",
-              "RelativeDocumentMoniker": "Highlighting\\PrologColorizer.cs",
-              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Highlighting\\PrologColorizer.cs",
-              "RelativeToolTip": "Highlighting\\PrologColorizer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Title": "PredicateInfo.cs",
+              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PredicateInfo.cs",
+              "RelativeDocumentMoniker": "Analysis\\PredicateInfo.cs",
+              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PredicateInfo.cs",
+              "RelativeToolTip": "Analysis\\PredicateInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:11:27.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-04T13:03:41.769Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PrologTerminal.cs",
-              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Controls\\PrologTerminal.cs",
-              "RelativeDocumentMoniker": "Controls\\PrologTerminal.cs",
-              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Controls\\PrologTerminal.cs",
-              "RelativeToolTip": "Controls\\PrologTerminal.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwDYAAAANAAAAAAAAAA==",
+              "Title": "CompletionService.cs",
+              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Completion\\CompletionService.cs",
+              "RelativeDocumentMoniker": "Completion\\CompletionService.cs",
+              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Completion\\CompletionService.cs",
+              "RelativeToolTip": "Completion\\CompletionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T21:54:36.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-30T22:07:21.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CompilerService.cs",
-              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Services\\CompilerService.cs",
-              "RelativeDocumentMoniker": "Services\\CompilerService.cs",
-              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Services\\CompilerService.cs",
-              "RelativeToolTip": "Services\\CompilerService.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAiwHwAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CompletionData.cs",
+              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Completion\\CompletionData.cs",
+              "RelativeDocumentMoniker": "Completion\\CompletionData.cs",
+              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Completion\\CompletionData.cs",
+              "RelativeToolTip": "Completion\\CompletionData.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAqwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-14T13:55:35.728Z"
+              "WhenOpened": "2026-07-30T22:03:51.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PrologKnowledge.cs",
+              "DocumentMoniker": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PrologKnowledge.cs",
+              "RelativeDocumentMoniker": "Analysis\\PrologKnowledge.cs",
+              "ToolTip": "C:\\\u0412\u043B\u0430\u0434\\\u041C\u043E\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B\\PrologCoder\\Analysis\\PrologKnowledge.cs",
+              "RelativeToolTip": "Analysis\\PrologKnowledge.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAcwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T21:27:24.909Z"
             }
           ]
         }

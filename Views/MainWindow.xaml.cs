@@ -1,10 +1,15 @@
-﻿using Microsoft.Win32;
+﻿using ICSharpCode.AvalonEdit.CodeCompletion;
+using Microsoft.Win32;
 using PrologCoder.Analysis;
+using PrologCoder.Completion;
 using PrologCoder.Highlighting;
 using PrologCoder.Models;
 using PrologCoder.Services;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Threading;
 
 namespace PrologCoder
@@ -22,9 +27,11 @@ namespace PrologCoder
         private readonly CompilerService _compilerService = new();
         private readonly PrologParser _parser = new();
         private readonly PrologColorizer _colorizer = new();
+        private readonly CompletionService _completionService = new();
 
         private Document _document = new();
         private List<PredicateInfo> _userPredicates = [];
+        private CompletionWindow? _completionWindow;
 
         public MainWindow()
         {
@@ -95,6 +102,208 @@ namespace PrologCoder
                 sbLine.Content = $"Line: {editor.TextArea.Caret.Line}";
                 sbColumn.Content = $"Column: {editor.TextArea.Caret.Column}";
             };
+            editor.TextArea.TextEntered += TextArea_TextEntered;
+            editor.TextArea.PreviewKeyDown += Editor_KeyDown;
+        }
+
+        private void TextArea_TextEntered(object? sender, TextCompositionEventArgs e)
+        {
+            string currentWord = GetCurrentWord();
+
+            if (string.IsNullOrEmpty(currentWord))
+                return;
+
+            if (_completionWindow == null)
+            {
+                _completionWindow = new CompletionWindow(editor.TextArea);
+
+                _completionWindow.CompletionList.IsFiltering = false;
+
+                _completionWindow.Closed += (_, _) =>
+                {
+                    _completionWindow = null;
+                };
+
+                _completionWindow.Show();
+            }
+
+            var data = _completionWindow.CompletionList.CompletionData;
+
+            data.Clear();
+
+            foreach (var item in _completionService.GetCompletions(currentWord, _userPredicates))
+            {
+                data.Add(item);
+            }
+
+            if (_completionWindow.CompletionList.CompletionData.Count > 0)
+                _completionWindow.CompletionList.SelectedItem =
+                    _completionWindow.CompletionList.CompletionData[0];
+
+            if (data.Count == 0)
+            {
+                _completionWindow.Close();
+                return;
+            }
+        }
+
+        private string GetCurrentWord()
+        {
+            int offset = editor.CaretOffset;
+            string text = editor.Text;
+
+            int start = offset;
+
+            while (start > 0)
+            {
+                char c = text[start - 1];
+
+                if (!char.IsLetterOrDigit(c) && c != '_')
+                    break;
+
+                start--;
+            }
+
+            return text[start..offset];
+        }
+
+        private void Editor_KeyDown(object sender, KeyEventArgs e)
+        {
+            int offset = editor.CaretOffset;
+
+            // Backspace для парных символов
+            if (e.Key == Key.Back)
+            {
+
+                if (offset > 0 && offset < editor.Text.Length)
+                {
+                    char left = editor.Text[offset - 1];
+                    char right = editor.Text[offset];
+
+                    bool isPair =
+                        (left == '(' && right == ')') ||
+                        (left == '[' && right == ']') ||
+                        (left == '\'' && right == '\'') ||
+                        (left == '"' && right == '"');
+
+                    if (isPair)
+                    {
+                        editor.Document.Remove(offset - 1, 2);
+                        editor.CaretOffset = offset - 1;
+
+                        e.Handled = true;
+                        return;
+                    }
+                }
+
+                return;
+            }
+
+            // (
+            if (e.Key == Key.D9 && Keyboard.Modifiers.HasFlag(ModifierKeys.Shift))
+            {
+                editor.Document.Insert(offset, "()");
+                editor.CaretOffset = offset + 1;
+
+                e.Handled = true;
+                return;
+            }
+
+            // )
+            if (e.Key == Key.D0 && Keyboard.Modifiers.HasFlag(ModifierKeys.Shift))
+            {
+                if (offset < editor.Text.Length && editor.Text[offset] == ')')
+                {
+                    editor.CaretOffset = offset + 1;
+
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            // [
+            if (e.Key == Key.Oem4 && !Keyboard.Modifiers.HasFlag(ModifierKeys.Shift))
+            {
+                editor.Document.Insert(offset, "[]");
+                editor.CaretOffset = offset + 1;
+
+                e.Handled = true;
+                return;
+            }
+
+            // ]
+            if (e.Key == Key.Oem6 && !Keyboard.Modifiers.HasFlag(ModifierKeys.Shift))
+            {
+                if (offset < editor.Text.Length && editor.Text[offset] == ']')
+                {
+                    editor.CaretOffset = offset + 1;
+
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            // ' и "
+            if (e.Key == Key.OemQuotes)
+            {
+                char quote = Keyboard.Modifiers.HasFlag(ModifierKeys.Shift) ? '"' : '\'';
+
+                if (offset < editor.Text.Length && editor.Text[offset] == quote)
+                {
+                    editor.CaretOffset = offset + 1;
+
+                    e.Handled = true;
+                    return;
+                }
+
+                editor.Document.Insert(offset, $"{quote}{quote}");
+                editor.CaretOffset = offset + 1;
+
+                e.Handled = true;
+                return;
+            }
+
+            // Enter
+            if (e.Key != Key.Enter)
+                return;
+
+            e.Handled = true;
+
+            string text = editor.Text;
+            string textBeforeCaret = text[..offset];
+
+            int lineStart = textBeforeCaret.LastIndexOf('\n') + 1;
+            string currentLine = textBeforeCaret[lineStart..];
+
+            string beforeCaret = currentLine.TrimEnd();
+
+            string indentation =
+                currentLine[..(currentLine.Length - currentLine.TrimStart().Length)];
+
+            if (beforeCaret.EndsWith(":-"))
+            {
+                string newIndentation =
+                    indentation + new string(' ', editor.Options.IndentationSize);
+
+                editor.Document.Insert(
+                    offset,
+                    Environment.NewLine + newIndentation + '.');
+
+                editor.CaretOffset =
+                    offset + Environment.NewLine.Length + newIndentation.Length;
+            }
+            else if (beforeCaret.EndsWith("."))
+            {
+                editor.Document.Insert(offset, Environment.NewLine);
+                editor.CaretOffset = offset + Environment.NewLine.Length;
+            }
+            else
+            {
+                editor.Document.Insert(offset, Environment.NewLine + indentation);
+
+                editor.CaretOffset =
+                    offset + Environment.NewLine.Length + indentation.Length;
+            }
         }
 
         private bool SaveDocument()
